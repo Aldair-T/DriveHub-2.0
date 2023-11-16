@@ -72,7 +72,7 @@ def repo_remoto() -> None:
     """
     print("\nREPOSITORIO REMOTO:\n")
     acceso = True
-    respuesta = SERVICE_DRIVE().files().list(fields="files(id, name, mimeType)").execute()
+    respuesta = SERVICE_DRIVE().files().list(q="trashed=false",fields="files(id, name, mimeType)").execute()
     listar_archivos_drive(respuesta)
     while acceso:
         seguir = input("\nQueres buscar alguna carpeta? s/n: ")
