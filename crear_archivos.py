@@ -3,6 +3,7 @@ from service_gmail import obtener_servicio as SERVICE_GMAIL
 from tqdm import tqdm
 from time import sleep
 
+
 def tipos_archivos_creacion() -> None:
     """
     Tipos de archivos para crear
@@ -13,6 +14,8 @@ def tipos_archivos_creacion() -> None:
           "4) Crear un archivo Form\n"
           "5) Crear una carpeta\n"
           "6) Salir")
+
+
 
 def elegir_extension(archivo_elegido: str) -> list:
     """
@@ -31,6 +34,7 @@ def elegir_extension(archivo_elegido: str) -> list:
     return mimeType
 
 
+
 def crear_archivo_drive(tipo_archivo: str) -> None:
     """
     Pre: Necesita el mimetype del archivo y su nombre
@@ -46,6 +50,8 @@ def crear_archivo_drive(tipo_archivo: str) -> None:
         sleep(.01)
     print("\nARCHIVO CREADO!!")
 
+
+
 def crear_carpeta_drive() -> None:
     """
     Crea una carpeta en drive
@@ -59,6 +65,7 @@ def crear_carpeta_drive() -> None:
     for i in tqdm(range(0, 100), desc ="Creando carpeta"):
         sleep(.01)
     print("\nCARPETA CREADA!!")
+
 
 
 def creacion_archivos() -> None:

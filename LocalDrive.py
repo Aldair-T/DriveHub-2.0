@@ -2,6 +2,7 @@ from service_drive import obtener_servicio as SERVICE_DRIVE
 from service_gmail import obtener_servicio as SERVICE_GMAIL
 from listar_archivos import *
 from crear_archivos import *
+from subir_archivos import *
 
 def menu() -> None:
     """
@@ -44,8 +45,7 @@ def main() -> None:
         elif opcion == 2:
             creacion_archivos()
         elif opcion == 3:
-            pass
-            #subir_archivos()
+            subir_archivo()
         elif opcion == 4:
             pass
             #ingresar_carpeta_descarga()
